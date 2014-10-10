@@ -1,0 +1,56 @@
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+.slider {
+  width: 100%;
+}
+.slider-slide {
+  text-align: center;
+  background: #fff;
+  min-height: 360px;
+  width: 100%;
+}
+
+.slider-slide img{
+  width: 100%;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+.text-home{
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+.tabs{
+  padding-top: 5px !important;
+}
+
+.marca{
+  color: #c00;
+  font-weight: bold;
+}
+.icon-me{
+  position: absolute;
+  right: 30px;
+  vertical-align: middle;
+  font-size: 40px;
+  display: inline-block;
+  top: 30%;
+}

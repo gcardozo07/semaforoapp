@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+   
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+    <!-- header -->
+      <ion-header-bar align-title="center" class="bar-light">
+        <h1 class="title"><img class="title-image" src="img/elsemaforo-logo.png" width="300" /></h1>
+      </ion-header-bar>
+    <!-- end header -->
+      <ion-content>
+      </ion-content>
+    
+    
+    <!-- tabs -->
+    <ion-tabs class="tabs-icon-top tabs-striped tabs-background-positive tabs-color-light">
+
+      <ion-tab title="Inicio" icon-on="ion-ios7-home" icon-off="ion-ios7-home">
+        <ion-content>
+    <!-- slidebox -->
+          <ion-slide-box auto-play="true" does-continue="true" slide-interval="2000" on-slide-changed="slideHasChanged($index)">
+            <ion-slide>
+              <img src="img/slide-01.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="img/slide-02.jpg" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="img/slide-03.jpg" alt="">
+            </ion-slide>
+          </ion-slide-box>
+    <!-- end slidebox -->
+    <!-- Text -->
+          <div class="text-home padding">
+              <p>Somos la empresa lider en todo tipo de accesorios para vehiculos, con mas de 10 años de experiencia en el mercado, ofreciendo productos de maxima calidad y brindando los mejores precios y siempre dispuestos a brindale un exelente servicio y asesoramiento.</p>
+          </div>
+    <!-- end Text -->
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="Marcas" icon-on="ion-speedometer" icon-off="ion-speedometer">
+        <ion-content>
+        
+        <div ng-controller="marcasController as marcasctrl">
+          
+          <div class="list">
+          <div ng-repeat="marca in marcasctrl.marcaunid">
+            <a class="item item-thumbnail-left" href="#">
+              <img src="{{marca.mini}}">
+              <h2 class="marca">{{marca.nombre}}</h2>
+              <p>{{marca.modelo}}</p>
+              <span class="icon-me"><i class="ion-plus-circled positive"></i></span>
+            </a>
+          </div>
+          </div>
+
+         </div>
+        
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="Contacto" icon-on="ion-chatbubble-working" icon-off="ion-chatbubble-working">
+        <!-- Tab 3 content -->
+      </ion-tab>
+
+    </ion-tabs>
+    <!-- end tabs -->
+   
+      
+
+    </ion-pane>
+  </body>
+</html>
